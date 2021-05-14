@@ -1,0 +1,10 @@
+<top-bar></top-bar>
+<side-bar [selectedIndex]="3"></side-bar>
+<div class="app-page">
+  <page-header title="Investments" subtitle=""></page-header>
+  <no-data
+    *ngIf="investments.length === 0"
+    [imageUrl]="'assets/svg/investment.svg'"
+    message="You have no investments at this time">
+  </no-data>
+</div>

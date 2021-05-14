@@ -1,0 +1,10 @@
+<top-bar></top-bar>
+<side-bar [selectedIndex]="4"></side-bar>
+<div class="app-page">
+  <page-header title="My Accounts" subtitle=""></page-header>
+  <no-data
+    *ngIf="accounts.length === 0"
+    [imageUrl]="'assets/svg/wallet.svg'"
+    message="You have no payment accounts">
+  </no-data>
+</div>

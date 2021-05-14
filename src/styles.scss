@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/purple-green.css";
+
+$sidebar-width: 250px;
+$sidebar-background: white;
+$nav-item-color: grey;
+$nav-item-selected-color: darkblue;
+
+body {
+  font-family: Montserrat, monospace !important;
+  height: 100%;
+  background: rgba(237, 237, 237, 0.1);
+}
+
+.error {
+  font-size: 12px;
+  font-weight: 400;
+  color: crimson;
+}
+
+
+.app-page{
+  padding: 90px 32px 32px;
+  font-size: 12px;
+  height: 100%;
+  .notification{
+    padding: 20px;
+  }
+
+}
+
+.mat-menu-panel{
+  margin-top: 32px;
+  min-width: 200px !important;
+  background: $sidebar-background;
+
+  .mat-menu-item {
+    color: $nav-item-color !important;
+    font-family: Montserrat, sans-serif !important;
+    .mat-icon{
+      color: $nav-item-color !important;
+      font-size: 20px;
+    }
+  }
+
+  .mat-menu-item:hover{
+    color: $nav-item-selected-color !important;
+    .mat-icon{
+      color: $nav-item-selected-color !important;
+    }
+  }
+}
+
+@media (min-width: 1200px){
+  .app-page{
+    padding: 120px 32px 32px;
+    margin-left: $sidebar-width;
+  }
+
+}

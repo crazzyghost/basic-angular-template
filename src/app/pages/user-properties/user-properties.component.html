@@ -1,0 +1,10 @@
+<top-bar></top-bar>
+<side-bar [selectedIndex]="2"></side-bar>
+<div class="app-page">
+  <page-header title="My Properties" subtitle=""></page-header>
+  <no-data
+    *ngIf="properties.length === 0"
+    [imageUrl]="'assets/svg/apartment.svg'"
+    message="You have no properties">
+  </no-data>
+</div>

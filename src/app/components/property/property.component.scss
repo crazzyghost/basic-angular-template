@@ -1,0 +1,76 @@
+.app-property {
+  margin: 25px auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.2);
+  .property-image{
+    img{
+      max-height: 100%;
+      max-width: 100%;
+      position: relative;
+      border-radius: 5px;
+    }
+  }
+
+  .property-details{
+    padding: 16px;
+    .name{
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .location{
+      font-size: 12px;
+    }
+    div.button{
+      span{
+        background: darkorange;
+        color: white;
+        padding: 2px 10px 2px;
+      }
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    .property{
+      color: grey;
+    }
+    .value{
+      float: right;
+    }
+  }
+
+  hr{
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+}
+
+.app-property:hover{
+  box-shadow: 0px 1px 30px 0px rgba(0,0,0,0.2);
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {  }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .app-property {
+    margin: 30px;
+    width: 290px !important;
+  }
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .app-property {
+    width: 250px !important;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .app-property {
+    width: 230px !important;
+    margin: 25px 25px 10px 0px;
+  }
+}

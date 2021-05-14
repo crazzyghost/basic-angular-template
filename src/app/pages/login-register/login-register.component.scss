@@ -1,0 +1,124 @@
+$form-width: 280px;
+
+.login-page {
+  height: 100vh;
+  width: 100%;
+  font-weight: 300;
+  background: white;
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    .tab-nav{
+      padding: 24px 0px 24px;
+      display: flex;
+      text-align: center;
+      min-width: $form-width;
+      span {
+        width: 50%;
+        padding: 12px;
+        font-weight: 700;
+      }
+      span.selected {
+        border-bottom: 3px solid darkblue;
+        color: darkblue;
+      }
+    }
+
+    .login-form {
+      min-width: $form-width;
+      margin-top: 12px;
+    }
+
+    label {
+      font-weight: 300;
+    }
+
+    form {
+      padding-top: 12px;
+    }
+
+    .form-control {
+      box-shadow: none;
+      border-radius: 2px;
+    }
+
+    .form-spinner {
+      text-align: center;
+      margin: 0 auto;
+      width: 24px;
+    }
+    span.form-header {
+      margin: 16px;
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+
+  button{
+    background-color: darkblue;
+    font-family: Montserrat, sans-serif;
+  }
+
+}
+
+
+@media (min-width: 576px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .login-page {
+    .form {
+      padding: 72px;
+    }
+
+    .login-form {
+      min-width: 400px !important;
+      margin-top: 12px;
+    }
+
+    .tab-nav {
+      min-width: 400px !important;
+      padding: 24px;
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .login-page {
+
+    .login-form {
+      min-width: 500px !important;
+      margin-top: 24px;
+    }
+
+    .tab-nav {
+      min-width: 500px !important;
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .login-page {
+    .form {
+      float: right;
+    }
+    .login-form {
+      min-width: $form-width !important;
+      margin-top: 24px;
+    }
+
+    .tab-nav {
+      min-width: $form-width !important;
+    }
+  }
+}
+

@@ -1,0 +1,46 @@
+@import "../../../../styles";
+
+.mat-toolbar{
+  padding-left: 50px;
+  background: white;
+  position: fixed;
+  z-index: 1000;
+  -webkit-box-shadow: 0px 0.5px 4px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0px 0.5px 4px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 0.5px 4px 0px rgba(0,0,0,0.5);
+  display: flex;
+  color: $nav-item-selected-color;
+  font-size: 14px;
+  font-family: Montserrat, sans-serif;
+}
+
+.mat-icon{
+  margin-right: 10px;
+  margin-left: 10px ;
+}
+
+
+.fill {
+  flex: 1 1 auto;
+}
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {  }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .mat-toolbar{
+    //padding-left: 0 !important;
+  }
+}

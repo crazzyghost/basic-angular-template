@@ -1,0 +1,101 @@
+<div class="login-page">
+  <div class="form">
+    <div class="tab-nav">
+      <span [class.selected]="isLoginSelected" (click)="setLoginSelected(true)">LOGIN</span>
+      <span [class.selected]="!isLoginSelected" (click)="setLoginSelected(false)">REGISTER</span>
+    </div>
+    <div *ngIf="isLoginSelected" class="login-form">
+      <span class="form-header"> Sign in to your account </span>
+
+      <form [formGroup]="loginForm" (ngSubmit)="onLoginFormSubmit(loginForm.value)">
+        <div class="form-group">
+          <!--          <label for="email">EMAIL: </label>-->
+          <input class="form-control" name="email" id="email" placeholder="Email Address" formControlName="email"
+                 type="email"/>
+          <div *ngIf="isLoginFormSubmitted && lf.email.errors" class="error">
+            <span *ngIf="lf.email.errors.required"> Required </span>
+            <span *ngIf="lf.email.errors.email"> Email is invalid </span>
+          </div>
+        </div>
+        <div class="form-group">
+          <!--          <label for="password">PASSWORD: </label>-->
+          <input class="form-control" name="password" id="password" type="password" placeholder="Password"
+                 formControlName="password"/>
+          <div *ngIf="isLoginFormSubmitted && lf.password.errors" class="error">
+            <span *ngIf="lf.password.errors.required"> Required </span>
+            <span *ngIf="lf.password.errors.minlength"> Minimum Length 8 characters </span>
+          </div>
+        </div>
+        <div *ngIf="isLoading" class="form-spinner">
+          <mat-progress-spinner  diameter="24" color="primary" [mode]="'indeterminate'"></mat-progress-spinner>
+        </div>
+        <button *ngIf="!isLoading" mat-flat-button color="primary" class="btn-block">
+          Login
+        </button>
+      </form>
+    </div>
+    <div *ngIf="!isLoginSelected" class="login-form">
+      <span class="form-header"> Create your account </span>
+      <form [formGroup]="registerForm" (ngSubmit)="onRegisterFormSubmit(registerForm.value)">
+        <div class="form-group">
+          <input class="form-control" name="firstname" id="firstname" placeholder="First name"
+                 formControlName="firstname"
+                 type="text"/>
+          <div *ngIf="isRegisterFormSubmitted && rf.firstname.errors" class="error">
+            <span *ngIf="rf.firstname.errors.required"> Required </span>
+          </div>
+        </div>
+        <div class="form-group">
+          <input class="form-control" name="lastname" id="lastname" placeholder="Last name" formControlName="lastname"
+                 type="text"/>
+          <div *ngIf="isRegisterFormSubmitted && rf.lastname.errors" class="error">
+            <span *ngIf="rf.lastname.errors.required"> Required </span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <!--          <label for="email">EMAIL: </label>-->
+          <input class="form-control" name="email" id="email" placeholder="Email Address" formControlName="email"
+                 type="email"/>
+          <div *ngIf="isRegisterFormSubmitted && rf.email.errors" class="error">
+            <span *ngIf="rf.email.errors.required"> Required </span>
+            <span *ngIf="rf.email.errors.email"> Email is invalid </span>
+          </div>
+        </div>
+        <div class="form-group">
+          <!--          <label for="phone">PHONE: </label>-->
+          <input class="form-control" name="phone" id="phone" placeholder="Phone Number" formControlName="phone"
+                 type="phone"/>
+          <div *ngIf="isRegisterFormSubmitted && rf.phone.errors" class="error">
+            <span *ngIf="rf.phone.errors.required"> Required </span>
+          </div>
+        </div>
+        <div class="form-group">
+          <!--          <label for="password">PASSWORD: </label>-->
+          <input class="form-control" name="password" id="password" type="password" placeholder="Password"
+                 formControlName="password"/>
+          <div *ngIf="isRegisterFormSubmitted && rf.password.errors" class="error">
+            <span *ngIf="rf.password.errors.required"> Required </span>
+            <span *ngIf="rf.password.errors.minlength"> Minimum Length 8 characters </span>
+          </div>
+        </div>
+        <div class="form-group">
+          <!--          <label for="confirm_password">CONFIRM PASSWORD: </label>-->
+          <input class="form-control" name="confirm_password" id="confirm_password" type="password"
+                 placeholder="Confirm Password"
+                 formControlName="confirmPassword"/>
+          <div *ngIf="isRegisterFormSubmitted && rf.confirmPassword.errors" class="error">
+            <span *ngIf="rf.confirmPassword.errors.required"> Required </span>
+            <span *ngIf="rf.confirmPassword.errors.minlength"> Minimum Length 8 characters </span>
+          </div>
+        </div>
+        <div *ngIf="isLoading" class="form-spinner">
+          <mat-progress-spinner  diameter="24" color="primary" [mode]="'indeterminate'"></mat-progress-spinner>
+        </div>
+        <button *ngIf="!isLoading" class="btn-block" mat-flat-button color="primary">
+          Register
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

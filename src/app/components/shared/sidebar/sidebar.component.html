@@ -1,0 +1,24 @@
+<!--<mat-sidenav-container class="example-sidenav-container"-->
+<!--                       [style.marginTop.px]="mobileQuery.matches ? 56 : 0">-->
+<div id="side-bar">
+  <mat-nav-list>
+    <div *ngFor="let nav of navigation; let i = index">
+      <nav-item
+        [selected]="i + 1 === selectedIndex"
+        title="{{nav.title}}"
+        icon="{{nav.icon}}"
+        url="{{nav.url}}"
+        [subNav]="nav.subNav || []"
+      ></nav-item>
+    </div>
+  </mat-nav-list>
+</div>
+
+<div id="side-bar-toggle">
+  <mat-icon (click)="toggleNav()" mat-list-icon>notes</mat-icon>
+</div>
+
+<!--  <mat-sidenav-content>-->
+<!--    <p *ngFor="let content of fillerContent">{{content}}</p>-->
+<!--  </mat-sidenav-content>-->
+<!--</mat-sidenav-container>-->

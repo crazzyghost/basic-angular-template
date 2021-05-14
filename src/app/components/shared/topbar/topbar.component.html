@@ -1,0 +1,22 @@
+<mat-toolbar color="teal" role="heading">
+  <span>Cofundie</span>
+  <!-- This fills the remaining space of the current row -->
+  <span class="fill"></span>
+<!--  <mat-icon mat-list-icon>mail_outline</mat-icon>-->
+<!--  <mat-icon mat-list-icon>notifications</mat-icon>-->
+  <mat-icon mat-list-icon [matMenuTriggerFor]="appMenu">more_vert</mat-icon>
+</mat-toolbar>
+<mat-menu #appMenu="matMenu">
+  <button mat-menu-item routerLink="/app/profile">
+    <mat-icon mat-list-icon>person</mat-icon>
+    Profile
+  </button>
+  <button mat-menu-item routerLink="/app/notifications">
+    <mat-icon mat-list-icon>notifications</mat-icon>
+    Messages
+  </button>
+  <button mat-menu-item>
+    <mat-icon mat-list-icon>power_settings_new</mat-icon>
+    Logout
+  </button>
+</mat-menu>

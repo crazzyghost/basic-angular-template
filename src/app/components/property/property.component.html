@@ -1,0 +1,25 @@
+<div class="app-property">
+  <div class="property-image">
+    <img alt="property image" src="{{property.imageUrl}}">
+  </div>
+  <div class="property-details">
+    <span class="name">{{property.name}}</span>
+    <br>
+    <span class="location">{{property.location}}</span>
+    <hr>
+    <span class="property">Available Shares</span>
+    <span class="value">{{property.availableShares}}</span>
+    <br>
+    <span class="property">Share price</span>
+    <span class="value">{{property.sharePrice | currency}}</span>
+    <br>
+    <span class="property">Yield</span>
+    <span class="value">{{property.yield | percent}} </span>
+    <br>
+    <span class="property">Hold period</span>
+    <span class="value">{{property.holdPeriod}}</span>
+    <br>
+    <br>
+    <div class="button"><span class="btn-xs">MORE</span></div>
+  </div>
+</div>
