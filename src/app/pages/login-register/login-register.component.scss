@@ -13,7 +13,7 @@ $form-width: 280px;
     justify-content: center;
     height: 100vh;
 
-    .tab-nav{
+    .tab-nav {
       padding: 24px 0px 24px;
       display: flex;
       text-align: center;
@@ -59,16 +59,13 @@ $form-width: 280px;
     }
   }
 
-  button{
+  button {
     background-color: darkblue;
     font-family: Montserrat, sans-serif;
   }
-
 }
 
-
 @media (min-width: 576px) {
-
 }
 
 // Medium devices (tablets, 768px and up)
@@ -93,7 +90,6 @@ $form-width: 280px;
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .login-page {
-
     .login-form {
       min-width: 500px !important;
       margin-top: 24px;
@@ -121,4 +117,3 @@ $form-width: 280px;
     }
   }
 }
-

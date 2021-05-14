@@ -4,7 +4,7 @@
   display: none;
 }
 
-.side-bar-hovering{
+.side-bar-hovering {
   display: block !important;
   width: $sidebar-width;
   background: $sidebar-background;
@@ -12,10 +12,10 @@
   position: fixed;
   margin-top: 55px;
   z-index: 3000;
-  box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.1);
+  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.1);
 }
 
-#side-bar-toggle{
+#side-bar-toggle {
   z-index: 2000;
   font-size: 30px;
   color: darkblue;
@@ -30,68 +30,61 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  .title{
+  .title {
     padding: 12px;
   }
-  .toggle{
+  .toggle {
     padding: 12px;
     flex: 1 1 auto;
     text-align: end;
   }
-  .icon{
+  .icon {
     padding: 12px;
   }
-
 }
 
-.sub-nav{
-  .nav-item{
+.sub-nav {
+  .nav-item {
     padding-left: 24px;
   }
 }
 
-.nav-item.selected{
+.nav-item.selected {
   color: $nav-item-selected-color;
 }
 
-.nav-item.expanded{
+.nav-item.expanded {
   color: $nav-item-selected-color;
 }
 
-
-.nav-item:hover{
+.nav-item:hover {
   color: $nav-item-selected-color;
 }
 
 @media (min-width: 576px) {
-
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  #side-bar-toggle{
+  #side-bar-toggle {
     display: none;
   }
 
-  #side-bar{
+  #side-bar {
     width: $sidebar-width;
     background: $sidebar-background;
     height: 100%;
     position: fixed;
     padding-top: 100px;
-    box-shadow: 0px 0.5px 6px 0px rgba(0,0,0,0.1);
+    box-shadow: 0px 0.5px 6px 0px rgba(0, 0, 0, 0.1);
     display: block;
   }
-
 }
-

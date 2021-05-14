@@ -1,14 +1,13 @@
-import {Component, OnInit} from '@angular/core';
-import {Property} from '../../models';
+import { Component, OnInit } from "@angular/core";
+import { Property } from "../../models";
 
 @Component({
   // tslint:disable-next-line:component-selector
-  selector: 'properties-component',
-  templateUrl: './properties.component.html',
-  styleUrls: ['./properties.component.scss']
+  selector: "properties-component",
+  templateUrl: "./properties.component.html",
+  styleUrls: ["./properties.component.scss"],
 })
 export class PropertiesComponent implements OnInit {
-
   public properties: Array<Property> = [];
 
   ngOnInit() {
@@ -29,7 +28,7 @@ export class PropertiesComponent implements OnInit {
         irr: null,
         netPresentValue: 20000,
         primaryMaterial: "Rammed Earth",
-        imageUrl: 'assets/images/house-1.jpeg'
+        imageUrl: "assets/images/house-1.jpeg",
       },
       {
         id: "12e41jeddjcninae1232",
@@ -43,13 +42,12 @@ export class PropertiesComponent implements OnInit {
         irr: null,
         netPresentValue: 50000,
         primaryMaterial: "Rammed Earth",
-        imageUrl: 'assets/images/house-2.jpeg'
-      }
+        imageUrl: "assets/images/house-2.jpeg",
+      },
     ];
 
     this.properties = [...data, ...data, ...data, ...data, ...data];
 
     console.log(this.properties);
-
   }
 }

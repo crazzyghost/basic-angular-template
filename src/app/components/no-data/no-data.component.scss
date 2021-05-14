@@ -1,12 +1,12 @@
 @import "../../../styles";
 
-.no-data{
+.no-data {
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  .no-data-image{
+  .no-data-image {
     height: 250px;
     margin: 24px;
     opacity: 0.8;
@@ -15,15 +15,15 @@
       max-height: 100%;
     }
   }
-  p{
+  p {
     margin: 24px;
   }
-  span.button{
+  span.button {
     background: $nav-item-selected-color;
     color: white;
     padding: 10px;
   }
-  span.button:hover{
-    box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.2);
+  span.button:hover {
+    box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
   }
 }

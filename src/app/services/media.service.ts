@@ -1,6 +1,6 @@
-import {ChangeDetectorRef, Injectable} from '@angular/core';
-import {MediaMatcher} from '@angular/cdk/layout';
-import {Subject} from 'rxjs';
+import { ChangeDetectorRef, Injectable } from "@angular/core";
+import { MediaMatcher } from "@angular/cdk/layout";
+import { Subject } from "rxjs";
 
 export interface MediaQuery {
   isMobile: boolean;
@@ -8,17 +8,16 @@ export interface MediaQuery {
   isDesktop: boolean;
 }
 
-@Injectable({providedIn: 'root'})
+@Injectable({ providedIn: "root" })
 export class MediaService {
-
   _subject = new Subject<MediaQuery>();
-  _screens: any =  {
-    mobile: 'screen and (min-width: 768px)',
-    tablet: 'screen and (min-width: 1012px)',
-    desktop: 'screen and (min-width: 1280px)'
+  _screens: any = {
+    mobile: "screen and (min-width: 768px)",
+    tablet: "screen and (min-width: 1012px)",
+    desktop: "screen and (min-width: 1280px)",
   };
 
-  get subject(): Subject<MediaQuery>  {
+  get subject(): Subject<MediaQuery> {
     return this._subject;
   }
 

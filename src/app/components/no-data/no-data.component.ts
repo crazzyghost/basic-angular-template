@@ -1,10 +1,10 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input } from "@angular/core";
 
 @Component({
   // tslint:disable-next-line:component-selector
-  selector: 'no-data',
-  templateUrl: 'no-data.component.html',
-  styleUrls: ['no-data.component.scss']
+  selector: "no-data",
+  templateUrl: "no-data.component.html",
+  styleUrls: ["no-data.component.scss"],
 })
 export class NoDataComponent {
   @Input()

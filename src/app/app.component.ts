@@ -1,19 +1,18 @@
-import {ChangeDetectorRef, Component, Inject, OnDestroy} from '@angular/core';
-import {MediaMatcher} from '@angular/cdk/layout';
-import {AppStore} from './app.store';
-import * as Redux from 'redux';
-import {AppState} from './app.reducer';
-import {mobileQueryChange} from './actions';
-import {MediaService} from './services/media.service';
+import { ChangeDetectorRef, Component, Inject, OnDestroy } from "@angular/core";
+import { MediaMatcher } from "@angular/cdk/layout";
+import { AppStore } from "./app.store";
+import * as Redux from "redux";
+import { AppState } from "./app.reducer";
+import { mobileQueryChange } from "./actions";
+import { MediaService } from "./services/media.service";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"],
 })
 export class AppComponent implements OnDestroy {
-
-  title = 'cofundie';
+  title = "cofundie";
 
   private query: MediaQueryList;
   private readonly queryListener: () => void;
@@ -21,19 +20,18 @@ export class AppComponent implements OnDestroy {
   constructor(
     changeDetectorRef: ChangeDetectorRef,
     media: MediaMatcher,
-    mediaService: MediaService,
+    mediaService: MediaService
   ) {
-    const { mobile, tablet, desktop} = mediaService.screens;
+    const { mobile, tablet, desktop } = mediaService.screens;
     this.query = media.matchMedia(mobile + " or " + tablet + "or" + desktop);
     this.queryListener = () => {
       changeDetectorRef.detectChanges();
-      console.log('here');
+      console.log("here");
       mediaService.setQuery({
-          isMobile: media.matchMedia(mobile).matches,
-          isTablet: media.matchMedia(tablet).matches,
-          isDesktop: media.matchMedia(desktop).matches,
-        }
-      );
+        isMobile: media.matchMedia(mobile).matches,
+        isTablet: media.matchMedia(tablet).matches,
+        isDesktop: media.matchMedia(desktop).matches,
+      });
     };
     this.query.addListener(this.queryListener);
   }
@@ -53,5 +51,4 @@ export class AppComponent implements OnDestroy {
   ngOnDestroy(): void {
     this.query.removeListener(this.queryListener);
   }
-
 }

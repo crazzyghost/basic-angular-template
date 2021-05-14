@@ -1,2 +1,2 @@
-export const AUTHENTICATING = '[Auth] Progress';
-export const REGISTERING = '[Auth] Registering';
+export const AUTHENTICATING = "[Auth] Progress";
+export const REGISTERING = "[Auth] Registering";

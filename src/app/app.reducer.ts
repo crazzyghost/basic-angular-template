@@ -1,7 +1,12 @@
-import {combineReducers, Reducer} from 'redux';
-import {mobileQueryReducer, MobileQueryState, usersReducer, UsersState} from './reducers';
-import {progressReducer} from './reducers';
-import {authReducer, AuthState} from './reducers';
+import { combineReducers, Reducer } from "redux";
+import {
+  mobileQueryReducer,
+  MobileQueryState,
+  usersReducer,
+  UsersState,
+} from "./reducers";
+import { progressReducer } from "./reducers";
+import { authReducer, AuthState } from "./reducers";
 
 export interface AppState {
   user: UsersState;

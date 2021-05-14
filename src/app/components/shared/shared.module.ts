@@ -1,6 +1,6 @@
-import {NgModule} from '@angular/core';
-import {TopBarComponent} from './topbar/topbar.component';
-import {CommonModule} from '@angular/common';
+import { NgModule } from "@angular/core";
+import { TopBarComponent } from "./topbar/topbar.component";
+import { CommonModule } from "@angular/common";
 import {
   MatBadgeModule,
   MatIconModule,
@@ -8,11 +8,11 @@ import {
   MatMenuModule,
   MatRippleModule,
   MatSidenavModule,
-  MatToolbarModule
-} from '@angular/material';
-import {SidebarComponent} from './sidebar/sidebar.component';
-import {NavItemComponent} from './sidebar/nav-item.component';
-import {RouterModule} from '@angular/router';
+  MatToolbarModule,
+} from "@angular/material";
+import { SidebarComponent } from "./sidebar/sidebar.component";
+import { NavItemComponent } from "./sidebar/nav-item.component";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
   imports: [
@@ -26,7 +26,7 @@ import {RouterModule} from '@angular/router';
     MatBadgeModule,
     MatMenuModule,
   ],
-  declarations: [ TopBarComponent, SidebarComponent, NavItemComponent ],
-  exports: [ TopBarComponent, SidebarComponent ]
+  declarations: [TopBarComponent, SidebarComponent, NavItemComponent],
+  exports: [TopBarComponent, SidebarComponent],
 })
 export class SharedModule {}
